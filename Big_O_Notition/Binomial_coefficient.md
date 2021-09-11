@@ -45,5 +45,9 @@ C (50, 2) = 1225.
 
 Answer: The number of shake hands = 1,225.
 
+## Reference
+**n Choose k Formula**; https://www.cuemath.com/n-choose-k-formula/
+
+
 
 
