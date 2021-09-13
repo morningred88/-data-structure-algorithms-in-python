@@ -15,10 +15,13 @@ def isAnagram(str1, str2):
     str1 = sorted(str1)
     str2 = sorted(str2)
 
+    # after that we have to check the charactors with the same indexes
+    # O(n) running time
     for i in range(len(str1)):
         if str1[i] != str2[i]:
             return False
     return True
+    # Overall running time is O(nlogn) + O(n) = O(nlogn)
 
 
 if __name__ == '__main__':
