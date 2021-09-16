@@ -28,7 +28,7 @@ class LinkedList:
     # We need to go through all the LinkedList to add a new node - linear running time O(n)
     def insert_end(self, data):
         self.numOfNodes = self.numOfNodes + 1
-        new_node = node(data)
+        new_node = Node(data)
         # actual node starts with the head node
         actual_node = self.head
         while actual_node.nextNode is not None:
@@ -36,8 +36,8 @@ class LinkedList:
 
         actual_node.nextNode == new_node
 
-    def traverseList(self):
-        actualNode = self.head
-        while actualNode is not None:
-            print(actualNode.data)
-            actualNode = actualNode.nextNode
+    def traverse_list(self):
+        actual_node = self.head
+        while actual_node is not None:
+            print(f'traverse {actual_node.data}')
+            actual_node = actual_node.nextNode
