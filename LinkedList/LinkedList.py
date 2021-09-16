@@ -20,7 +20,8 @@ class LinkedList:
         # If it is an empty linkedList, then the head node will be the new node
         if not self.head:
             self.head = new_node
-        # If the linkedlist is not empty, then we need to update the references, the current head node will be next node, the new node will become the head node
+        # If the linkedlist is not empty, then we need to update the references,
+        # the current head node will be next node, the new node will become the head node
         else:
             new_node.nextNode = self.head
             self.head = new_node
@@ -36,8 +37,41 @@ class LinkedList:
 
         actual_node.nextNode == new_node
 
+    # O(N)
     def traverse_list(self):
         actual_node = self.head
         while actual_node is not None:
             print(f'traverse {actual_node.data}')
             actual_node = actual_node.nextNode
+
+    def remove(self, data):
+        if self.head is None:
+            return
+        actual_node = self.head
+        previous_node = None
+
+        while actual_node is not None and actual_node.data != data:
+            previous_node = actual_node
+            actual_node = actual_node.nextNode
+        # Search miss - the item is not present in the linked list
+        if actual_node is None:
+            return
+        if previous_node is None:
+            self.head = actual_node.nextNode
+        else:
+            previous_node.nextNode = actual_node.nextNode
+
+
+linked_list = LinkedList()
+linked_list.insert_start(4)
+linked_list.insert_start(3.0)
+linked_list.insert_start("Adam")
+linked_list.insert_start(10)
+linked_list.insert_start(100)
+linked_list.insert_start(1000)
+
+linked_list.traverse_list()
+print('-----------------')
+linked_list.remove(10)
+print('-----------------')
+linked_list.traverse_list()
