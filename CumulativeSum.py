@@ -6,6 +6,8 @@ class CumulativeSum:
     """
 
     def rec_sum(self, n):
+
+        # Base case
         if n == 0:
             return 0
         else:
