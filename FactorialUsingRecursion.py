@@ -1,6 +1,6 @@
 class FactorialUsingRecursion:
     """
-    This class demonstrate the factorial of a given number using recursion
+    This class demonstrates the factorial of a given number using recursion
     """
 
     def fact(self, number):
