@@ -12,6 +12,6 @@ class FactorialUsingRecursion:
             return number * self.fact(number-1)
 
 
-factorial = Factorial()
+factorial = FactorialUsingRecursion()
 print(factorial.fact(5))
 
