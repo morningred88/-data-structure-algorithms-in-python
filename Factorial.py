@@ -1,4 +1,4 @@
-class Factorial:
+class FactorialUsingRecursion:
     """
     This class demonstrate the factorial of a given number using recursion
     """
