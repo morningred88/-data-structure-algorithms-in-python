@@ -1,4 +1,5 @@
-# Word RAM Model
+# Word RAM Model of Computation
+RAM - random access memory
 
 ## Byte-Oriented Memory Organization
 
@@ -9,7 +10,7 @@ Memory is organized in bytes, a collection of sequential 8 bits. Each of the byt
 Where did those numbers go in these bytes of memory, it depends on the compiler and run time system of our machine. It decide where the numbers are stored and allocates them. 
 
 ## Machine Words
-A **word** is the bit size of memory address, in order to define how big a chunk of memory that CPU can take out of the memory and operate on. 
+A **word** is the bit size of memory address, in order to define how big a chunk of memory that CPU can take out of the memory and operate on. The width of machine word is w, in real computer it is 64.
 
 * If the word size is 32 bit, it can indext 2^64 memory addresses, so limits 4 Gb of memory.  
 * The word size is 64 bits in most current computer system, which means it can indext 2^64 memory addresses. 
@@ -17,5 +18,11 @@ A **word** is the bit size of memory address, in order to define how big a chunk
 * For backward-compatibility, many CPU support different word sizes
  * Alway a power-of-2 in the number of bytes: 1, 2, 4, 8, ...
 
-## Reference:
-1. Memory & Data, Video 2: Bits, bytes, words; Luis Ceze; https://www.youtube.com/watch?v=VP03XyUhZk4
+## Definition of Word RAM model
+
+* Memory is divided into words of lenght w bits. 
+* For size-n input, always assume w >= log n. It sounds weird, the size of our computer hardware depends on the input? We should think the machine grows bigger over time. If we need to deal a very big n, we shouls make sure the input n can be put into the word. 
+* Costs constant time "1" to do the basic operation on w bits. The basic operation include: addition; substraction; bitwise AND, OR, NOT; shift left or right
+The machine is designed to work on the w-bits words in constant time
+
+
