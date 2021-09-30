@@ -21,8 +21,11 @@ A **word** is the bit size of memory address, in order to define how big a chunk
 ## Definition of Word RAM model
 
 * Memory is divided into words of lenght w bits. 
-* For size-n input, always assume w >= log n. It sounds weird, the size of our computer hardware depends on the input? We should think the machine grows bigger over time. If we need to deal a very big n, we shouls make sure the input n can be put into the word. 
+* For size-n input, always assume w >= log n. It sounds weird, the size of our computer hardware depends on the input? We should think the machine grows bigger over time. If we want to process a larger input, we need to buy more RAM to make sure the input n can be put into the word. Eventually, if the n grow really really big, we have to incrase the w to address that RAM. With theory of algorithm, we care about the scalbility for very large n. 
 * Costs constant time "1" to do the basic operation on w bits. The basic operation include: addition; substraction; bitwise AND, OR, NOT; shift left or right
 The machine is designed to work on the w-bits words in constant time
 
+## Reference:
+1. Memory & Data, Video 2: Bits, bytes, words; By Luis Ceze; https://www.youtube.com/watch?v=VP03XyUhZk4
+2. The Word RAM Model || @ CMU || Lecture 6c of CS Theory Toolkit; By Ryan O'Donnell; https://www.youtube.com/watch?v=yMcgAzeWDi0
 
