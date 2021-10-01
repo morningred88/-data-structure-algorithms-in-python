@@ -8,15 +8,39 @@ For example, you are packing luggage for a trip, and you want to carry 5 dresses
 
 ## Calculation of n choose k formula
 
-"n choose k" is denoted by C (n, k) 
+"n choose k" is denoted by C (n, k)  or 
+$$
+\binom{n}{k}
+$$
+
 
 The n choose k formula is also known as combinations formula (as we call a way of choosing things to be a combination). This formula involves factorials.
 
 The n Choose k Formula is:
 
 $$
-C (n , k) = n! / [ (n-k)! k! ]
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
 $$
+
+## Prove the formula using a simple Examples 
+
+Find the number of ways of forming a team of 2 members out of 4 members.
+
+The available combination is:
+
+(1, 2) (1, 3) (1, 4)
+
+​          (2, 3) (2, 4)
+
+​                   (3, 4)
+
+There is 6 ways to select 2 out of 4 members. 
+
+We can get the same result using the formula:
+$$
+\binom{4}{2} = \frac{4!}{2!(4-2)!}
+$$
+
 
 ## Solved Example
 
@@ -47,7 +71,5 @@ Answer: The number of shake hands = 1,225.
 
 ## Reference
 [n Choose k Formula](https://www.cuemath.com/n-choose-k-formula/)
-
-
 
 
