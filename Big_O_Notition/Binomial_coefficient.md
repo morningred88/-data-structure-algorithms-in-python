@@ -8,7 +8,7 @@ For example, you are packing luggage for a trip, and you want to carry 5 dresses
 
 ## Calculation of n choose k formula
 
-"n choose k" is denoted by C (n, k)  or 
+"n choose k" is denoted by C (n, k)  or  
 $$
 \binom{n}{k}
 $$
@@ -68,6 +68,28 @@ C (50, 2) = (50 × 49) / (2 × 1)
 C (50, 2) = 1225.
 
 Answer: The number of shake hands = 1,225.
+
+## Asymptotic behavior related to binomial coefficient 
+For each of the following sets of five functions, order them so that if fa appears before fb in your sequence, then $f_a = O(f_b)$. If fa = O(fb) and fb = O(fa) (meaning fa and fb could appear in either order), indicate this by enclosing fa and fb in a set with curly braces.
+$$
+f_1 = 2^n
+$$
+
+$$
+f_2 = n^3
+$$
+
+$$
+f_3 = \binom{n}{n/2}
+$$
+
+$$
+f_4 = n!
+$$
+
+$$
+f_5 = \binom{n}{3}
+$$
 
 ## Reference
 [n Choose k Formula](https://www.cuemath.com/n-choose-k-formula/)
