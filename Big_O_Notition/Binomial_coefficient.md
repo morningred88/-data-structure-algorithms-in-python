@@ -8,10 +8,7 @@ For example, you are packing luggage for a trip, and you want to carry 5 dresses
 
 ## Calculation of n choose k formula
 
-"n choose k" is denoted by C (n, k)  or  
-$$
-\binom{n}{k}
-$$
+"n choose k" is denoted by C (n, k)  or  $\binom{n}{k}$.
 
 
 The n choose k formula is also known as combinations formula (as we call a way of choosing things to be a combination). This formula involves factorials.
@@ -70,7 +67,9 @@ C (50, 2) = 1225.
 Answer: The number of shake hands = 1,225.
 
 ## Asymptotic behavior related to binomial coefficient 
-For each of the following sets of five functions, order them so that if fa appears before fb in your sequence, then $f_a = O(f_b)$. If fa = O(fb) and fb = O(fa) (meaning fa and fb could appear in either order), indicate this by enclosing fa and fb in a set with curly braces.
+### Question
+
+For each of the following sets of five functions, order them so that if fa appears before fb in your sequence, then $f_a = O(f_b)$. If $f_a = O(f_b)$ and $f_b = O(f_a)$ (meaning $f_a$ and $f_b$ could appear in either order), indicate this by enclosing fa and fb in a set with curly braces.
 $$
 f_1 = 2^n
 $$
@@ -91,7 +90,34 @@ $$
 f_5 = \binom{n}{3}
 $$
 
+### mathematical formulas used in the problem
+
+We need to know a few mathematical formula before we start solving the problem:
+
+* $({a}{b})^n = {a^n}{b^n}$, $(\frac{a}{b})^n = \frac{a^n}{b^n}$
+
+* In the big O world, the slow growing function can be ignored. If $f_1= f_a + f_b$  and $f_a=o(f_b)$, then $f_1=O(f_b)$; If $f2= fa fb$ and $f_a=o(f_b)$, you cannot ignore $f_a$, $f_1=O(f_a f_b)$. 
+
+* Sterling approximation: **Stirling's approximation**  is an approximation for [factorials](https://en.wikipedia.org/wiki/Factorial).
+  $$
+  n!\sim {\sqrt {2\pi n}}\left({\frac {n}{e}}\right)^{n}
+  $$
+
+### Working procedure to the solution
+
+Without any calculation but with the help of Stirling's approximation, we know $O(f_2) < O(f_1) < O(f_4)$
+
+
+
+## 
+
+
+
 ## Reference
+
 [n Choose k Formula](https://www.cuemath.com/n-choose-k-formula/)
 
+[Stirling's approximationrling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)
+
+# 
 
