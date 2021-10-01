@@ -96,6 +96,8 @@ We need to know a few mathematical formula before we start solving the problem:
 
 * $({a}{b})^n = {a^n}{b^n}$, $(\frac{a}{b})^n = \frac{a^n}{b^n}$
 
+* $(n^a)^b = n^{ab}$
+
 * In the big O world, the slow growing function can be ignored. If $f_1= f_a + f_b$  and $f_a=o(f_b)$, then $f_1=O(f_b)$; If $f2= fa fb$ and $f_a=o(f_b)$, you cannot ignore $f_a$, $f_1=O(f_a f_b)$. 
 
 * Sterling approximation: **Stirling's approximation**  is an approximation for [factorials](https://en.wikipedia.org/wiki/Factorial).
@@ -107,17 +109,49 @@ We need to know a few mathematical formula before we start solving the problem:
 
 Without any calculation but with the help of Stirling's approximation, we know $O(f_2) < O(f_1) < O(f_4)$
 
+**Big O notation for $f_5$:**
+$$
+\begin{gather*}
+f_5 = \binom{n}{3}\\
+f_5 = \frac{n!}{3!(n-3)!}\\
+f_5 = \frac{n(n-1)(n-2)}{3!}\\
+f_5 = O(n^3)
+\end{gather*}
+$$
+So $O(f_5)=O(f_2)$
 
 
-## 
+
+**Big O notation for $f_3$:**
 
 
+$$
+\begin{gather*}
+f_3 = \binom{n}{n/2}\\
+f_5 = \frac{n!}{(n/2)!(n-n/2)!}\\
+f_5 = \frac{n!}{((n/2)!)^2}\\
+\end{gather*}
+$$
+Now using Stirling's approximation to get the big O notion result:
+$$
+\begin{gather*}
+f_5 = \frac{n!}{((n/2)!)^2}\\
+f_5 = \frac{\sqrt{2\pi n}(n/e)^n}{(\sqrt{\pi n}(n/2e)^{n/2})^2}\\
+f_5 = \frac{\sqrt{2\pi n}(n/e)^n}{{\pi n}(n/2e)^n}\\
+f_5 = \frac{\sqrt2\cdot 2^n}{\sqrt{\pi n}}\\
+\end{gather*}
+$$
+Remove all the constants, we can get $f_5 = O(\frac{2^n}{\sqrt{n}})$, which is less than $f_1 = O(2^n)$.
+
+The solution of this problem is: ({$f_2, f_5$},$f_3, f_1, f_4$)
 
 ## Reference
 
 [n Choose k Formula](https://www.cuemath.com/n-choose-k-formula/)
 
 [Stirling's approximationrling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)
+
+
 
 # 
 
