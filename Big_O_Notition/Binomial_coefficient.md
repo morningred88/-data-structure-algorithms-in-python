@@ -149,7 +149,9 @@ The solution of this problem is: ({$f_2, f_5$},$f_3, f_1, f_4$)
 
 [n Choose k Formula](https://www.cuemath.com/n-choose-k-formula/)
 
-[Stirling's approximationrling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)
+[Stirling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)
+
+[MIT OpenCourseWare - Introduction to Algorithms - Problem Session 1: Asymptotic Behavior of Functions  and Double-ended...](https://www.youtube.com/watch?v=IPSaG9RRc-k&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=3)
 
 
 
