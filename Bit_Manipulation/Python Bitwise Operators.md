@@ -104,7 +104,30 @@ $$
 a << n = a * 2^n
 $$
 
+### Right Shift a >> n
 
+Returns a with the bits shifted to the right by n places.  The **rightmost** bits always get dropped.
+
+**Example in python console:**   
+
+```
+>>> 10>>1
+5
+>>> 10>>2
+2
+>>> 10>>3
+1
+```
+
+**Explanation:**
+
+10 = 8 + 2  			 Binary: 1010
+
+=> 10>>1 =101  	Decimal 5
+
+=> 5>>2 =10   	   Decimal 2
+
+=> 5>>3 =1       	 Decimal 1
 
 ## Reference:
 
