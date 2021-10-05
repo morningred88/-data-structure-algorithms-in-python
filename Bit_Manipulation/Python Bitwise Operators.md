@@ -53,7 +53,26 @@ Or operation: Compare the bits, if any one  is 1, you can get 1, otherwise get 0
 
 ​                                         Or:   1 0 1 1 1 1 1=> Decimal: 64 +16 + 8 + 4 + 2 + 1 = 95
 
+## Bitwise exclusive or - (^) 
 
+Xor operation: If the bits are both 1 or 0, then 0; If one of the bits is 1, then 1
+
+**Example in python console:**
+
+```
+>>> 75 ^ 21
+94
+```
+
+**Explanation:**
+
+75 = 64 + 8 + 2 + 1   binary: 1 0 0 1 0 1 1
+
+21 = 16 + 4 + 1         binary:  0 0 1 0 1 0 1
+
+​                                          Or:   1 0 1 1 1 1 0=> Decimal: 64 +16 + 8+ 4 +2 +1 = 94
+
+​                                     
 
 ## Reference:
 
