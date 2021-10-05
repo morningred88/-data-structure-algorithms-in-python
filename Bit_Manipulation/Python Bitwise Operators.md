@@ -53,7 +53,7 @@ Or operation: Compare the bits, if any one  is 1, you can get 1, otherwise get 0
 
 ​                                         Or:   1 0 1 1 1 1 1=> Decimal: 64 +16 + 8 + 4 + 2 + 1 = 95
 
-## Bitwise exclusive or - (^) 
+## Bitwise exclusive or (^) 
 
 Xor operation: If the bits are both 1 or 0, then 0; If one of the bits is 1, then 1
 
@@ -72,7 +72,39 @@ Xor operation: If the bits are both 1 or 0, then 0; If one of the bits is 1, the
 
 ​                                          Or:   1 0 1 1 1 1 0=> Decimal: 64 +16 + 8+ 4 +2 +1 = 94
 
-​                                     
+    ## Bitwise Shift Operators
+
+### Left Shift a << n
+
+Returns a with the bits shifted to the left by n places (and new bits on the right-hand-side are zeros). 
+
+**Example in python console:**
+
+```
+>>> 5<<1
+10
+>>> 5<<2
+20
+>>> 5<<3
+40
+```
+
+**Explanation:**
+
+5 = 4 + 1  Binary: 101 
+
+=> 5<<1 =1010   		Decimal 10
+
+=> 5<<2 =10100   	  Decimal 20
+
+=> 5<<3 =101000       Decimal 40
+
+In general, shifting bits to the left corresponds to multiplying the number by a **power of two**, with an exponent equal to the number of places shifted:
+$$
+a << n = a * 2^n
+$$
+
+
 
 ## Reference:
 
