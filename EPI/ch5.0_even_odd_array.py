@@ -9,6 +9,8 @@ When working with arrays, we should take advantage of the fact that we can work 
 - Both index will meet in the middle
 - If the value of the even index is an even number, move even index 1 step forward
 - If the value of the even index is an odd number, swap it with the value from current odd index, then move odd index 1 step backward
+Time complexity: O(n)
+Space Complexity: O(1)
 """
 
 def even_sort(array) -> None:
