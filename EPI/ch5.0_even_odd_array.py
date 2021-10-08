@@ -1,5 +1,14 @@
 """
+Question: Your input is integers, how can you recorder the input so that even entries appears first
+"""
+"""
+Explanation: 
 When working with arrays, we should take advantage of the fact that we can work efficiently on both ends
+- Set the even index as the start point of the array
+- Set odd index as the last index of the array
+- Both index will meet in the middle
+- If the value of the even index is an even number, move even index 1 step forward
+- If the value of the even index is an odd number, swap it with the value from current odd index, then move odd index 1 step backward
 """
 
 def even_sort(array) -> None:
@@ -15,6 +24,5 @@ def even_sort(array) -> None:
             next_even += 1
 
     return array
-
 
 print(even_sort ([1,2,3,4]))
