@@ -19,3 +19,24 @@ Second pass- move all the element greater than A[i] to the last partition: We us
 Time Complexity O(N^2), space complexity O(1)
 
 """
+
+from typing import List
+
+
+def dutch_flag_partition(A:List[int], pivot_index: int) -> None:
+    pivot = A[pivot_index]
+    smaller, equal, larger = 0, 0, len(A)-1
+    while equal < larger:
+        if A[equal] < pivot:
+            A[smaller], A[equal] = A[equal], A[smaller]
+            smaller, equal = smaller +1, equal + 1
+        elif A[equal] == pivot:
+            equal += 1
+        else:
+            A[larger], A[equal] = A[equal], A[larger]
+            larger -= 1
+    return A
+
+
+array = [1, 7, 3, 8, 2, 5, 1, 5, 1, 5, 2]
+print(dutch_flag_partition(array, 5))
