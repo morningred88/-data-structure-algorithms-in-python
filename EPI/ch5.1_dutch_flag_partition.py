@@ -18,11 +18,14 @@ First pass - move all the element less than A[i] to the first partition: Conside
 Second pass- move all the element greater than A[i] to the last partition: We use the same method as for moving all the element less than A[i]. But this time starting from the last element of the array A[len(A)-1). It also tooks 2 for loops to find all the elements greater than A[i].
 Time Complexity O(N^2), space complexity O(1)
 
+Optimized Solution:
+We will reorder the element into less than, equal to and greater than the pivot with single pass. We do this by maintaining four subarrays: bottom (element less than pivot), middle (element equals to pivot) unclassified, top (element greater than pivot). Initially, all elements are unclassified. We iterate through elements in unclassified, move elements into one of bottom, middle or top groups.
+Time Complexity O(N), space complexity O(1)
 """
 
 from typing import List
 
-
+#Time Complexity O(N), space complexity O(1)
 def dutch_flag_partition(A:List[int], pivot_index: int) -> None:
     pivot = A[pivot_index]
     smaller, equal, larger = 0, 0, len(A)-1
