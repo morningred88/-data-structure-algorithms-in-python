@@ -1,3 +1,9 @@
+"""
+My own question to variation question 2
+Given an array A of n objects with keys that takes one of five values, reorder the arrays so that all objects that have the same key appear together. Use O(1) space and O(n) time
+
+This question is used to prove the explanation I wrote for partition problems in variation question 2
+"""
 from typing import List
 
 def five_keys_partition(A:List[int], first: int, second: int, third: int, forth: int, fifth: int)-> List:
