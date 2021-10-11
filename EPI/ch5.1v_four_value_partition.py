@@ -18,24 +18,24 @@ partition 2 moves one step forward, partition 2 needs to swap with partion 3
 
 from typing import List
 
-def four_keys_partition(A:List[int], first: int, second: int, third: int, forth: int)-> List:
 
-    first_key, second_key, third_key, forth_key = 0, 0, 0, len(A)
+def four_keys_partition(A:List[int], first_key: int, second_key: int, third_key: int, fourth_key:int)-> List:
 
-    while (third_key < forth_key):
-        if A[third_key] == first:
-            A[first_key], A[third_key] = A[third_key], A[first_key]
-            A[third_key], A[second_key] = A[second_key], A[third_key]
-            first_key, second_key, third_key = first_key +1, second_key +1, third_key +1
+    first, second, third, fourth = 0, 0, 0, len(A)
 
-        elif A[third_key] == second:
-            A[second_key], A[third_key] = A[third_key], A[second_key]
-            second_key, third_key = second_key + 1, third_key + 1
-        elif A[third_key] == third:
-            third_key +=1
+    while third < fourth:
+        if A[third] == first_key:
+            A[first], A[third] = A[third], A[first]
+            A[third], A[second] = A[second], A[third]
+            first, second, third = first +1, second +1, third +1
+        elif A[third] == second_key:
+            A[second], A[third] = A[third], A[second]
+            second, third = second + 1, third + 1
+        elif A[third] == third_key:
+            third +=1
         else:
-            forth_key -=1
-            A[forth_key], A[third_key] =A[third_key], A[forth_key]
+            fourth -=1
+            A[fourth], A[third] =A[third], A[fourth]
 
     return A
 
