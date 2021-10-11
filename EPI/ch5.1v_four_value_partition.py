@@ -15,7 +15,6 @@ partiton 1 moves one step forward, both partition 1 and 2 need to swap with part
 partition 2 moves one step forward, partition 2 needs to swap with partion 3
 5. For the last partition, the index of it moves backward. In order to loop through all the elements of the array, the index is initiated as len(A), whcih is out of the array. If when a element with value > pivot, then we move the index one step backwards, then do the swap. 
 """
-
 from typing import List
 
 
@@ -27,17 +26,18 @@ def four_keys_partition(A:List[int], first_key: int, second_key: int, third_key:
         if A[third] == first_key:
             A[first], A[third] = A[third], A[first]
             A[third], A[second] = A[second], A[third]
-            first, second, third = first +1, second +1, third +1
+            first, second, third = first + 1, second + 1, third + 1
         elif A[third] == second_key:
             A[second], A[third] = A[third], A[second]
             second, third = second + 1, third + 1
         elif A[third] == third_key:
-            third +=1
+            third += 1
         else:
-            fourth -=1
+            fourth -= 1
             A[fourth], A[third] =A[third], A[fourth]
-
     return A
 
-print(four_keys_partition([2, 1, 1, 2, 4, 3, 1, 2, 3, 1, 2, 4, 2, 3], 1, 2, 3, 4))
+
+array = [2, 1, 1, 2, 4, 3, 1, 2, 3, 1, 2, 4, 2, 3]
+print(four_keys_partition(array, 1, 2, 3, 4))
 
