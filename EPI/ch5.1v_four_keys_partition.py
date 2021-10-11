@@ -18,7 +18,7 @@ partition 2 moves one step forward, partition 2 needs to swap with partion 3
 from typing import List
 
 
-def four_keys_partition(A:List[int], first_key: int, second_key: int, third_key: int, fourth_key:int)-> List:
+def four_keys_partition(A:List[int], first_key: int, second_key: int, third_key: int, fourth_key:int) -> List:
 
     first, second, third, fourth = 0, 0, 0, len(A)
 
