@@ -8,12 +8,13 @@ When working with arrays, we should take advantage of the fact that we can work 
 - Set odd index as the last index of the array
 - Both index will meet in the middle
 - If the value of the even index is an even number, move even index 1 step forward
-- If the value of the even index is an odd number, swap it with the value from current odd index, then move odd index 1 step backward
+- If the value of the even index is an odd number, swap it with the value from current odd index, then move odd index 1 step backwards.
 Time complexity: O(n)
 Space Complexity: O(1)
 
 Note: Using this method, it does not keep array's relative order. last appeared even number should be the first element in the reordered array. 
 """
+
 
 def even_sort(array) -> None:
 
