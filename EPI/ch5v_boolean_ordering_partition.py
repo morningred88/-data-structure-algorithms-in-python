@@ -20,6 +20,7 @@ def rearrange_boolean_forward(A:List[bool]) -> List:
 
     return A
 
+
 def rearrange_boolean_backward(A:List[bool]) -> List:
 
     # Initialize the placement position (index) of the 2 subarrays
@@ -34,5 +35,22 @@ def rearrange_boolean_backward(A:List[bool]) -> List:
     return A
 
 
+# This method is used for testing the method rearrange_boolean_backward(A)
+def rearrange_boolean_backward_test(A:List[int]) -> List:
+
+    # Initialize the placement position (index) of the 2 subarrays
+    false, true = len(A)-1, len(A)-1
+    for i in reversed(range(0, len(A))):
+        if A[i] == 0:
+            false -= 1
+        else:
+            A[true], A[false] = A[false], A[true]
+            false, true = false - 1, true - 1
+
+    return A
+
+
 array = [False, True, True, False]
 print(rearrange_boolean_backward(array))
+array_test =[0, 1, 2, 0]
+print(rearrange_boolean_backward_test(array_test))
