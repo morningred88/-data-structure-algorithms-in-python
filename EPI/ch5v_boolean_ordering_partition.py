@@ -4,6 +4,16 @@ Given an array A of n objects with Boolean-valued key, reorder the array so that
 The relative ordering of key true should not be change.
 Use O(1) additional space and O(N) time.
 """
+"""
+2 partitions for this problem: False key, True key
+From ch5.0_even_odd_array.py result, we know rearrangement from both forward and backward does not keep the ordering.
+My first thought: Loop through the array forward to reorder both partitions. After testing, it did not keep the ordering.
+Solution: Loop through the array backward'
+
+Testing: In order to test, I write the test methods for both forward and backward rearrangement method.
+0-> False
+1, 2 -> True
+"""
 
 from typing import List
 
